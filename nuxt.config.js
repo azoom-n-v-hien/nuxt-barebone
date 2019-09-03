@@ -1,8 +1,8 @@
+const path = require('path') // eslint-disable-line
+const rsmdcCompilerModule = require('@rsmdc/nuxt').rsmdcCompilerModule
+
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -16,44 +16,40 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: [],
-  /*
-   ** Plugins to load before mounting the App
-   */
+  css: [
+    '@/node_modules/rsmdc/material-components-web',
+    '@/assets/scss/app.scss'
+  ],
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
-  ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
-  /*
-   ** Build configuration
-   */
+  buildModules: ['@nuxtjs/eslint-module'],
+  modules: ['@rsmdc/nuxt', '@nuxtjs/axios'],
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+    hardSource: process.env.NODE_ENV === 'development',
+    transpile: ['@rsmdc'],
+    loaders: {
+      scss: {
+        sassOptions: {
+          includePaths: [
+            path.resolve(__dirname),
+            path.resolve(__dirname, 'node_modules')
+          ]
+        }
+      },
+      vue: {
+        compilerOptions: {
+          modules: [rsmdcCompilerModule]
+        }
+      }
+    },
+    babel: {
+      presets: [['@babel/preset-env', { modules: false }]],
+      plugins: [
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/plugin-transform-runtime'
+      ],
+      sourceType: 'unambiguous' // to fix module.exports problem
+    }
   }
 }

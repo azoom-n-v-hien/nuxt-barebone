@@ -1,0 +1,15 @@
+{
+  "name": "@rsmdc/nuxt",
+  "version": "0.0.1",
+  "description": "nuxt module",
+  "files": [
+    "index.js",
+    "package.json"
+  ],
+  "main": "./index.js",
+  "author": "rsmdc",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "nuxt": ">=2.0.0"
+  }
+}

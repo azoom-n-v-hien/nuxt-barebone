@@ -8,17 +8,8 @@
       <h2 class="subtitle">
         A test nuxt project with some libraries installed
       </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <div class="rsmdc-demo">
+        <button class="mdc-button -outline">This is a rsmdc button</button>
       </div>
     </div>
   </div>
