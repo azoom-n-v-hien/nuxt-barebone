@@ -35,7 +35,10 @@ export default {
             path.resolve(__dirname),
             path.resolve(__dirname, 'node_modules')
           ]
-        }
+        },
+        data: `
+          @import './assets/scss/rsmdc-mixins';
+        `
       },
       vue: {
         compilerOptions: {
