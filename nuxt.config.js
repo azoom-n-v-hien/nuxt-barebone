@@ -34,11 +34,11 @@ export default {
           includePaths: [
             path.resolve(__dirname),
             path.resolve(__dirname, 'node_modules')
-          ]
-        },
-        data: `
-          @import './assets/scss/rsmdc-mixins';
-        `
+          ],
+          data: `
+            @import './assets/scss/rsmdc-mixins';
+          `
+        }
       },
       vue: {
         compilerOptions: {
