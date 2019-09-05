@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@rsmdc/nuxt": "./rsmdc-nuxt",
+    "bootstrap-scss": "4.3.1",
     "nuxt": "^2.0.0",
     "rsmdc": "^0.39.1-beta.2",
     "vuex-pathify": "1.1.3"

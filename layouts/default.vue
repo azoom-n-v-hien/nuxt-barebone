@@ -49,7 +49,7 @@ html {
 }
 
 .button--grey:hover {
-  color: #fff;
+  color: red;
   background-color: #35495e;
 }
 </style>

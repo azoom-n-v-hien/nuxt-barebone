@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        minuet-barebone
+        nguyen van hien
       </h1>
       <h2 class="subtitle">
         A test nuxt project with some libraries installed
