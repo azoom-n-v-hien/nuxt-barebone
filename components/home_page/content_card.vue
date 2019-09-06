@@ -1,37 +1,10 @@
 <template>
   <div>
-    <h4>2週間以上ステータスを変更していない案件</h4>
-    <div class="title">
-      <h3><strong>30件</strong>の案件があります。</h3>
-      <button class="mdc-button">
-        全て確認
-      </button>
-    </div>
-    <div id="all-card">
-      <div class="mdc-card my-card"> <!-- loop -->
-        <div class="mdc-card__media mdc-card__media--square card-1">
-          <div class="mdc-card__media-content name">契約調整</div>
-          <div class="mdc-card__media-content number">3 契</div>
-        </div>
-      </div>
-    </div>
+    <slot name="title"></slot>
+    <slot name="content"></slot>
   </div>
 </template>
 
-<script>
-  var objects = new Vue({
-    el: '#all-card',
-    data: {
-      sum: 30,
-      items: [
-        { name: '受付', number: '1 件 '},
-        { name: '空室有メール送信（レオパ', number: '4 件' },
-        { name: '契約調整' , number: '2 件'},
-        { name: 'ヒアリング済', number: '2 件'},
-      ],
-    }
-  });
-</script>
 <style>
 .container {
   max-width: 1246px;
@@ -48,10 +21,12 @@ h4 {
 }
 #all-card {
   display: flex;
+  flex-wrap: wrap;
 }
 .my-card {
-  width: 25%;
-  margin-right: 20px;
+  width: 23%;
+  margin-right: 24px;
+  margin-bottom: 30px;
 }
 .card-1 {
   display: flex;
@@ -68,7 +43,13 @@ h4 {
 .title strong {
   color: red;
 }
-.name{
-  color:#42A5F5;
+button {
+  margin-top: 11px;
+}
+.name {
+  color: #42a5f5;
+}
+.number {
+  color: #42a5f5;
 }
 </style>
