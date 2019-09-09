@@ -19,7 +19,9 @@ export default {
   loading: { color: '#fff' },
   css: [
     '@/node_modules/rsmdc/material-components-web',
-    '@/assets/scss/app.scss'
+    '@/assets/scss/app.scss',
+    '@/assets/scss/style.scss'
+
   ],
   plugins: [],
   buildModules: ['@nuxtjs/eslint-module'],

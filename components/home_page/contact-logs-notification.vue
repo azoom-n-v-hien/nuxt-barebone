@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="contact-log">
     <div class="title">
       <h3>
-        <strong>{{ sum }}</strong>
-        件 の案件があります。
+        <strong>{{ sum }}件</strong>
+        の案件があります。
       </h3>
       <button
         class="mdc-button"
@@ -12,14 +12,24 @@
         全て確認
       </button>
     </div>
-    <div id="all-card">
-      <div v-for="item in object" :key="item.number" class="mdc-card my-card">
+    <div class="mdc-layout-grid">
+      <div class="inner">
         <div
-          class="mdc-card__media mdc-card__media--square card-1"
-          @click="actions(item.name)"
+          v-for="item in object"
+          :key="item.number"
+          class="cell -span3-desktop -span6-table -span4mobile"
         >
-          <div class="mdc-card__media-content name">{{ item.name }}</div>
-          <div class="mdc-card__media-content number">{{ item.number }}</div>
+          <div class="mdc-card my-card">
+            <div
+              class="mdc-card__media mdc-card__media--square card-1"
+              @click="actions(item.name)"
+            >
+              <div class="mdc-card__media-content name">{{ item.name }}</div>
+              <div class="mdc-card__media-content number">
+                <strong>{{ item.number }}</strong> 件
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -32,11 +42,14 @@ export default {
     return {
       sum: 30,
       object: [
-        { name: '受付', number: '1 件' },
-        { name: 'ヒアリング済', number: '2 件' },
-        { name: '空室有メール送信', number: '3 件' },
-        { name: '空室有メール送信（直営', number: '4 件' },
-        { name: '空室有メール送信（直営', number: '4 件' }
+        { name: '受付', number: 1 },
+        { name: 'ヒアリング済', number: 2 },
+        { name: '空室有メール送信', number: 4 },
+        { name: '空室有メール送信（直営', number: 7 },
+        { name: '空室有メール送信（直営', number: 8 },
+        { name: '受付', number: 5 },
+        { name: '受付', number: 1 },
+        { name: 'ヒアリング済', number: 2 }
       ]
     }
   },
