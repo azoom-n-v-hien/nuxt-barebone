@@ -1,60 +1,47 @@
 <template>
-  <div class="contact-log">
+  <div class="contact-logs-notification">
     <div class="title">
-      <h3>
-        <strong>{{ sum }}件</strong>
+      <h3 class="title-cln">
+        <strong>{{ getTotalItemCount }}件</strong>
         の案件があります。
       </h3>
       <button
         class="mdc-button"
-        @click="actions('wellcome to Vietnam - Japan')"
+        @click="checkAllContactStatuses('wellcome to Vietnam - Japan')"
       >
         全て確認
       </button>
     </div>
-    <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid content-card">
       <div class="inner">
-        <div
-          v-for="item in object"
-          :key="item.number"
-          class="cell -span3-desktop -span6-table -span4mobile"
-        >
-          <div class="mdc-card my-card">
-            <div
-              class="mdc-card__media mdc-card__media--square card-1"
-              @click="actions(item.name)"
-            >
-              <div class="mdc-card__media-content name">{{ item.name }}</div>
-              <div class="mdc-card__media-content number">
-                <strong>{{ item.number }}</strong> 件
-              </div>
-            </div>
-          </div>
-        </div>
+        <contactLogInfoCard
+          v-for="(value, key) in getContactLogs"
+          :key="key"
+          :log-info-card-key="key"
+          :log-info-card-value="value"
+        ></contactLogInfoCard>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { get, dispatch } from 'vuex-pathify'
+import contactLogInfoCard from '~/components/home_page/contact-log-info-card.vue'
+
 export default {
-  data() {
-    return {
-      sum: 30,
-      object: [
-        { name: '受付', number: 1 },
-        { name: 'ヒアリング済', number: 2 },
-        { name: '空室有メール送信', number: 4 },
-        { name: '空室有メール送信（直営', number: 7 },
-        { name: '空室有メール送信（直営', number: 8 },
-        { name: '受付', number: 5 },
-        { name: '受付', number: 1 },
-        { name: 'ヒアリング済', number: 2 }
-      ]
-    }
+  components: {
+    contactLogInfoCard
+  },
+  computed: {
+    getContactLogs: get('staffs/getContactLogs'),
+    getTotalItemCount: get('staffs/getTotalItemCount')
+  },
+  mounted() {
+    dispatch('staffs/getContactLogSummary')
   },
   methods: {
-    actions(e) {
+    checkAllContactStatuses(e) {
       alert(e)
     }
   }

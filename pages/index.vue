@@ -2,7 +2,12 @@
   <div class="container">
     <div>
       <contentCard>
-        <h4 slot="title">2週間以上ステータスを変更していない案件</h4>
+        <div slot="title" class="title-card">
+          <img class="icon" src="@/assets/svg/warnning.svg" />
+          <h4 class="title-content-card">
+            2週間以上ステータスを変更していない案件
+          </h4>
+        </div>
         <contactLogsNotification slot="content"></contactLogsNotification>
       </contentCard>
     </div>
