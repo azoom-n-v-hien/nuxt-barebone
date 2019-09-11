@@ -10,20 +10,20 @@ $fontSize: 13px;
     display: flex;
     margin-bottom: 6px;
   }
-}
-.contact-logs-notification > .title > .sum-notification {
-  padding: 22px 29px;
-  font-size: $fontSize;
-}
-.contact-logs-notification > .title > .sum-notification > .sum-number {
-  color: rgb(214, 14, 14);
-  font-size: 20px;
-}
-.contact-logs-notification > .title > .confirm-btn {
-  margin-top: 20px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0 1px 3px #86858529;
-  color: $color;
-  width: 100px;
-  height: 30px;
+  > .title > .sum {
+    padding: 22px 29px;
+    font-size: $fontSize;
+  }
+  > .title > .sum > .number {
+    color: rgb(214, 14, 14);
+    font-size: 20px;
+  }
+  > .title > .confirm-btn {
+    margin-top: 20px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0 1px 3px #86858529;
+    color: $color;
+    width: 100px;
+    height: 30px;
+  }
 }

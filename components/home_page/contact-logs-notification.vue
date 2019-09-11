@@ -1,8 +1,8 @@
 <template>
   <div class="contact-logs-notification">
     <div class="title">
-      <h3 class="sum-notification">
-        <strong class="sum-number">{{ totalItemCount }}件</strong>
+      <h3 class="sum">
+        <strong class="number">{{ totalItemCount }}件</strong>
         の案件があります。
       </h3>
       <button
