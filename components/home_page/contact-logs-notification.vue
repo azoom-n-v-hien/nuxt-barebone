@@ -1,12 +1,12 @@
 <template>
   <div class="contact-logs-notification">
     <div class="title">
-      <h3 class="-notification">
-        <strong>{{ totalItemCount }}件</strong>
+      <h3 class="sum-notification">
+        <strong class="sum-number">{{ totalItemCount }}件</strong>
         の案件があります。
       </h3>
       <button
-        class="mdc-button"
+        class="mdc-button confirm-btn"
         @click="checkAllContactStatuses('wellcome to Vietnam - Japan')"
       >
         全て確認
@@ -17,8 +17,8 @@
         <contact-logs-info-card
           v-for="(value, key) in contactLogs"
           :key="key"
-          :log-info-card-key="key"
-          :log-info-card-value="value"
+          :contact-log-status-key="key"
+          :contact-log-status-value="value"
         />
       </div>
     </div>

@@ -7,7 +7,7 @@
           2週間以上ステータスを変更していない案件
         </h4>
       </div>
-      <contact-logs-notification slot="content"></contact-logs-notification>
+      <contact-logs-notification slot="content" />
     </content-card>
   </div>
 </template>

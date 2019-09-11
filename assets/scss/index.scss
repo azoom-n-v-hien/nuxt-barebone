@@ -1,0 +1,25 @@
+$tabColor: #607d8b;
+$fontSize: 13px;
+.container {
+  width: 100%;
+  margin: 40px auto;
+  > .content-card > .title-card {
+    position: relative;
+    z-index: 2222;
+  }
+  > .content-card >.title-card > .icon {
+    position: absolute;
+    z-index: 444;
+    top: 12px;
+    left: 27px;
+  }
+  > .content-card > .title-card > .title-content-card {
+    text-align: left;
+    letter-spacing: 0;
+    color: #fff;
+    opacity: 0.87;
+    background: $tabColor;
+    padding: 15px 56px;
+    font-size: 14px;
+  }
+}

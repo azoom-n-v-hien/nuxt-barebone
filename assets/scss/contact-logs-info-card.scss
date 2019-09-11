@@ -9,12 +9,12 @@
       box-shadow: 0 1px 3px #d2cfcf;
     }
   }
-  > .info .-text {
+  > .info > .text {
     color: $color;
     font-size: $fontSize;
     font-weight: bold;
   }
-  > .info strong {
+  > .info > .text > .number {
     font-size: 22px;
   }
 }
