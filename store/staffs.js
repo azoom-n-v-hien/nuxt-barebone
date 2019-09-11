@@ -27,14 +27,11 @@ export const getters = {
     }, 0)
   },
   getContactLogs: (_) => {
-    if (
-      _.staff &&
-      _.staff.summary &&
-      _.staff.summary.contactLogs &&
-      _.staff.summary.contactLogs.needUpdatingContact
-    )
+    try {
       return _.staff.summary.contactLogs.needUpdatingContact
-    return {}
+    } catch (e) {
+      return {}
+    }
   }
 }
 export const actions = {

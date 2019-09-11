@@ -1,8 +1,8 @@
 <template>
   <div class="contact-logs-notification">
     <div class="title">
-      <h3 class="title-cln">
-        <strong>{{ getTotalItemCount }}件</strong>
+      <h3 class="-notification">
+        <strong>{{ totalItemCount }}件</strong>
         の案件があります。
       </h3>
       <button
@@ -14,12 +14,12 @@
     </div>
     <div class="mdc-layout-grid content-card">
       <div class="inner">
-        <contactLogInfoCard
-          v-for="(value, key) in getContactLogs"
+        <contact-logs-info-card
+          v-for="(value, key) in contactLogs"
           :key="key"
           :log-info-card-key="key"
           :log-info-card-value="value"
-        ></contactLogInfoCard>
+        />
       </div>
     </div>
   </div>
@@ -27,15 +27,15 @@
 
 <script>
 import { get, dispatch } from 'vuex-pathify'
-import contactLogInfoCard from '~/components/home_page/contact-log-info-card.vue'
+import contactLogsInfoCard from '~/components/home_page/contact-logs-info-card.vue'
 
 export default {
   components: {
-    contactLogInfoCard
+    contactLogsInfoCard
   },
   computed: {
-    getContactLogs: get('staffs/getContactLogs'),
-    getTotalItemCount: get('staffs/getTotalItemCount')
+    contactLogs: get('staffs/getContactLogs'),
+    totalItemCount: get('staffs/getTotalItemCount')
   },
   mounted() {
     dispatch('staffs/getContactLogSummary')

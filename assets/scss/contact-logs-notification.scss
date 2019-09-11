@@ -1,55 +1,52 @@
 $tabColor: #607d8b;
 $color: #42a5f5;
-$font-size: 13px;
-body {
-  background: #d2cfcf;
-  .container {
-    width: 100%;
-    margin: 40px auto;
-    .title-card {
-      position: relative;
-      z-index: 2222;
-      img {
-        position: absolute;
-        z-index: 444;
-        top: 12px;
-        left: 27px;
-      }
-      > .title-content-card {
-        text-align: left;
-        letter-spacing: 0;
-        color: #fff;
-        opacity: 0.87;
-        background: $tabColor;
-        padding: 15px 56px;
-        font-size: 14px;
-      }
+$fontSize: 13px;
+.container {
+  width: 100%;
+  margin: 40px auto;
+  .title-card {
+    position: relative;
+    z-index: 2222;
+  }
+  .title-card > .icon {
+    position: absolute;
+    z-index: 444;
+    top: 12px;
+    left: 27px;
+  }
+  .title-card > .title-content-card {
+    text-align: left;
+    letter-spacing: 0;
+    color: #fff;
+    opacity: 0.87;
+    background: $tabColor;
+    padding: 15px 56px;
+    font-size: 14px;
+  }
+  .contact-logs-notification {
+    background: #fff;
+  }
+  .contact-logs-notification > .content-card {
+    padding-top: 0;
+  }
+  .contact-logs-notification > .title {
+    display: flex;
+    margin-bottom: 6px;
+  }
+  .contact-logs-notification > .title > .-notification {
+    padding: 22px 29px;
+    font-size: $fontSize;
+    strong {
+      color: rgb(214, 14, 14);
+      font-size: 20px;
     }
-    .contact-logs-notification {
-      background: #fff;
-    }
-    .contact-logs-notification > .content-card {
-      padding-top: 0;
-    }
-    .contact-logs-notification > .title {
-      display: flex;
-      margin-bottom: 6px;
-    }
-    .contact-logs-notification > .title > .title-cln {
-      padding: 22px 29px;
-      font-size: 13px;
-      strong {
-        color: rgb(214, 14, 14);
-        font-size: 20px;
-      }
-    }
-    .contact-logs-notification > .title > button {
-      margin-top: 20px;
-      background: #ffffff 0% 0% no-repeat padding-box;
-      box-shadow: 0px 1px 3px #86858529;
-      color: $color;
-      width: 100px;
-      height: 30px;
-    }
+  }
+  .contact-logs-notification > .title > button {
+    margin-top: 20px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #86858529;
+    color: $color;
+    width: 100px;
+    height: 30px;
   }
 }

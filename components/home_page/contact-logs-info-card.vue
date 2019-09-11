@@ -2,10 +2,10 @@
   <div class="cell -span3desktop -span4tablet -span4mobile">
     <div class="mdc-card contact-logs-info-card">
       <div class="media -square info" @click="checkAllContactStatuses(value)">
-        <div class="-content text">
-          {{ langs.contactLogs[logInfoCardKey] }}
+        <div class="-content -text">
+          {{ langs.contactStatus[logInfoCardKey] }}
         </div>
-        <div class="-content number text-number">
+        <div class="-content number -text">
           <strong>{{ logInfoCardValue }}</strong> 件
         </div>
       </div>
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       langs: {
-        contactLogs: {
+        contactStatus: {
           receptionist: '受付',
           heard: 'ヒアリング済',
           sendAvailableMail: '空室有メール送信',
