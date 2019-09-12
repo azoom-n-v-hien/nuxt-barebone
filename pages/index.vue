@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import contentCard from '~/components/home_page/content_card.vue'
+import contentCard from '~/components/home_page/content-card.vue'
 import contactLogsNotification from '~/components/home_page/contact-logs-notification.vue'
 
 export default {
