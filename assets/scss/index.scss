@@ -3,17 +3,17 @@ $fontSize: 13px;
 .container {
   width: 100%;
   margin: 40px auto;
-  > .content-card > .title-card {
+  > .content-card > .title {
     position: relative;
     z-index: 2222;
   }
-  > .content-card >.title-card > .icon {
+  > .content-card >.title > .icon {
     position: absolute;
     z-index: 444;
     top: 12px;
     left: 27px;
   }
-  > .content-card > .title-card > .text {
+  > .content-card > .title > .text {
     text-align: left;
     letter-spacing: 0;
     color: #fff;
