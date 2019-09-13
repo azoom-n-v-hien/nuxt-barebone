@@ -12,7 +12,7 @@
         全て確認
       </button>
     </div>
-    <div class="mdc-layout-grid content-list">
+    <div class="mdc-layout-grid content">
       <div class="inner">
         <contact-logs-info-card
           v-for="(value, key) in contactLogs"

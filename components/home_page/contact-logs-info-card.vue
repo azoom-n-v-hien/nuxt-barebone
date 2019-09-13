@@ -1,13 +1,13 @@
 <template>
-  <div class="cell -span3desktop -span4tablet -span4mobile">
-    <div class="mdc-card contact-logs-info-card">
-      <div class="media -square info" @click="checkAllContactStatuses(value)">
-        <div class="text">
-          {{ contactStatus[contactLogStatusKey] }}
-        </div>
-        <div class="text">
-          <strong class="number">{{ contactLogStatusValue }}</strong> 件
-        </div>
+  <div
+    class="mdc-card contact-logs-info-card cell -span3desktop -span4tablet -span4mobile"
+  >
+    <div class="media -square info" @click="checkAllContactStatuses(value)">
+      <div class="text">
+        {{ contactStatus[contactLogStatusKey] }}
+      </div>
+      <div class="text">
+        <strong class="number">{{ contactLogStatusValue }}</strong> 件
       </div>
     </div>
   </div>
