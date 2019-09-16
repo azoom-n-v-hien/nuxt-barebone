@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mdc-card contact-logs-info-card cell -span3desktop -span4tablet -span4mobile"
+    class="mdc-card cell -span3desktop -span4tablet -span4mobile contact-logs-info-card "
   >
     <div class="media -square info" @click="checkAllContactStatuses(value)">
       <div class="text">
