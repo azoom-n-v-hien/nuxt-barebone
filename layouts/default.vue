@@ -16,7 +16,6 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -49,7 +48,7 @@ html {
 }
 
 .button--grey:hover {
-  color: #fff;
+  color: red;
   background-color: #35495e;
 }
 </style>

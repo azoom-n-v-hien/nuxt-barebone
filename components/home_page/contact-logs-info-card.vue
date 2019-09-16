@@ -1,0 +1,37 @@
+<template>
+  <div
+    class="mdc-card cell -span3desktop -span4tablet -span4mobile contact-logs-info-card "
+  >
+    <div class="media -square info" @click="checkAllContactStatuses(value)">
+      <div class="text">
+        {{ contactStatus[contactLogStatusKey] }}
+      </div>
+      <div class="text">
+        <strong class="number">{{ contactLogStatusValue }}</strong> 件
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ['contactLogStatusKey', 'contactLogStatusValue'],
+  data() {
+    return {
+      contactStatus: {
+        receptionist: '受付',
+        heard: 'ヒアリング済',
+        sendAvailableMail: '空室有メール送信',
+        sendAvailableMailDirectMng: '空室有メール送信（直営）',
+        sendAvailableMailLeopalace: '空室有メール送信（レオパ）',
+        sendFollowUpMail: '追客メール送信',
+        toContact: '連絡つかず受付',
+        prospects: '見込み',
+        contractAdjustment: '契約調整',
+        reversing: '逆引き中',
+        sendFollowMail: 'フォローメール送信'
+      }
+    }
+  }
+}
+</script>
